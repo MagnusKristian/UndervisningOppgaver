@@ -8,25 +8,24 @@
 </head>
 <body>
     <h1>
-        Gjett hva jeg heter:
+        Hva heter jeg?:
     </h1>
     <input onchange="checkUserinput(this.value)" >
 <script>
     let userinput = "";
-    let password = "";
+    
    
 
-function checkUserinput(thisUserinput){
-    userinput = thisUserinput;
-    password += thisUserinput;
-    if(userinput == "magnus" || password == "magnus" ){
+function checkUserinput(userinput){
+   
+    if(userinput == "magnus" ){
 
         alert("Riktig!");
         location.reload();
 
     }
     else{
-        alert("Feil!")
+        alert("Feil!");
         location.reload();
     }
 
