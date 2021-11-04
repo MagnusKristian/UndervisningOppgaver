@@ -18,7 +18,11 @@
     //model
     // det er feil på "svar" variabelen, må finne ut hvordan jeg kan 
     //-legge fler alternativer under samme. parentes virker ikke....
-    let svar = ("magnus","Magnus","magnus kristian","Magnus Kristian");
+    //evt endre til const og legge til hakeparentes
+    let svar1 = "magnus";
+    let svar2 = "Magnus";
+    let svar3 = "magnus kristian";
+    let svar4 = "Magnus Kristian";
     let qwqw = "";
     let hovedDiv = document.getElementById('hoved');
     
@@ -30,7 +34,7 @@
         Hva heter jeg?:
     </h1>
     <input onchange="checkUserinput(this.value)" >
-    <h2 id="qwqw"></h2>
+    <h2 id="navnID"></h2>
 
 
             `;
@@ -41,17 +45,19 @@
    //controller
 function checkUserinput(userinput){
    
-    if(userinput == svar ){
+    if(userinput == svar1 || userinput == svar2 || userinput == svar3 || userinput == svar4){
 
         qwqw = "Riktig!";
-       
+        //location.reload();
+       //hvordan implementere reload så neste gang du trykker eller prøver å skrive noe så blir "riktig/feil" borte?
 
     }
     else{
         qwqw = "Feil!";
+        //location.reload();
        
     }
-    document.getElementById('qwqw').innerHTML = qwqw;
+    document.getElementById('navnID').innerHTML = qwqw;
 }
 </script>
 </body>
